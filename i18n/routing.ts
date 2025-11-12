@@ -10,6 +10,7 @@ export const routing = defineRouting({
   localePrefix: 'as-needed',
   pathnames: {
     '/': '/',
-    '/blog': '/blogas'
+    '/blog': '/blogas',
+    '/about': '/apie',
   }
 });
