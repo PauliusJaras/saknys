@@ -1,5 +1,12 @@
 {
   "HomePage": {
     "title": "Sveiki, pasauli!"
+  },
+  "Navigation": {
+    "home": "Pradžia",
+    "reservation": "Rezervacija",
+    "about": "Apie",
+    "contact": "Kontaktai",
+    "blog": "Blogas"
   }
 }
