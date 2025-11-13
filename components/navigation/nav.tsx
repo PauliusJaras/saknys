@@ -4,19 +4,19 @@ import MenuOpenButton from "./menuOpenButton";
 
 export default function Nav() {
   return (
-    <nav className="fixed top-[8vh] lg:left-1/12 lg:-translate-x-1/12 left-1/2 -translate-x-1/2 flex gap-2 justify-center items-center bg-[#090A09] p-2 uppercase rounded-xl transition-all shadow-md text-sm">
+    <nav className="fixed top-[4vh] lg:top-[8vh] lg:left-1/12 lg:-translate-x-1/12 left-1/2 -translate-x-1/2 flex gap-2 justify-center items-center bg-[#090A09] p-2 uppercase rounded-xl transition-all shadow-md text-sm w-fit">
       <MenuOpenButton />
-      <Link href={"/"}>
+      <Link className="w-[75px] sm:w-[99px] md:mr-1 mr-4" href={"/"}>
         <Image src={"/logo.svg"} alt="Saknys logo" width={99} height={350} />
       </Link>
       <Link
-        className="hover:bg-current/5 hover:border-current/15 border-transparent border rounded-lg py-3 px-4 text-md transition-all duration-500 ease-out-in"
+        className="hidden md:inline-block hover:bg-current/5 hover:border-current/15 border-transparent border rounded-lg py-3 px-4 text-md transition-all duration-500 ease-out-in"
         href={"/blog"}
       >
         blog
       </Link>
       <Link
-        className="hover:bg-current/5 hover:border-current/15 border-transparent border rounded-lg py-3 px-4 text-md transition-all duration-500 ease-out-in"
+        className="hidden md:inline-block hover:bg-current/5 hover:border-current/15 border-transparent border rounded-lg py-3 px-4 text-md transition-all duration-500 ease-out-in"
         href={"/about"}
       >
         about
