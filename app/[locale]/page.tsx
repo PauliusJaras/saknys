@@ -1,11 +1,9 @@
-import { useTranslations } from "next-intl";
+import Hero from "@/components/hero/Hero";
 
 export default function Home() {
-  const t = useTranslations("HomePage");
-
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black h-[200vh]">
-      {t("title")}
+    <div className="grid grid-cols-2 h-full gap-4">
+      <Hero />
     </div>
   );
 }
