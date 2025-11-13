@@ -45,7 +45,7 @@ export default async function RootLayout({ children, params }: Props) {
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <Nav />
-          {children}
+          <div className="h-screen p-4">{children}</div>
         </body>
       </html>
     </NextIntlClientProvider>
