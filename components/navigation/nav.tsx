@@ -6,7 +6,7 @@ export default function Nav() {
   return (
     <nav className="fixed md:absolute top-[4vh] lg:top-[8vh] lg:left-[75px] lg:translate-x-0 left-1/2 -translate-x-1/2 flex gap-2 justify-center items-center bg-[#090A09] p-2 uppercase rounded-xl transition-all shadow-md text-sm w-fit z-50">
       <MenuOpenButton />
-      <Link className="w-[75px] sm:w-[99px] md:mr-1 mr-4" href={"/"}>
+      <Link className="mb-1 w-[75px] sm:w-[99px] md:mr-1 mr-4" href={"/"}>
         <Image src={"/logo.svg"} alt="Saknys logo" width={99} height={350} />
       </Link>
       <Link
