@@ -16,7 +16,7 @@ export default function Hero() {
       >
         <source src="/videos/hero-video.mp4" type="video/mp4" />
       </video>
-      <div className="bg-background absolute bottom-0 right-0 pt-4 pl-4 flex gap-3 items-end rounded-tl-4xl">
+      <div className="bg-background absolute bottom-0 right-0 pt-3.5 pl-4 flex gap-3 items-end rounded-tl-4xl">
         <SocialMediaButton src="https://www.instagram.com">
           <CiInstagram />
         </SocialMediaButton>
@@ -34,7 +34,7 @@ export default function Hero() {
             alt="curve svg element"
           ></Image>
         </div>
-        <div className="size-10 absolute -left-[23.5px] bottom-0 flex items-end">
+        <div className="size-10 absolute -left-[23.3px] bottom-0 flex items-end">
           <Image
             src={"/curve.svg"}
             height={24}
