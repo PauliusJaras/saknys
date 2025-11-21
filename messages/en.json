@@ -1,5 +1,12 @@
 {
   "HomePage": {
     "title": "Hello world!"
+  },
+  "Navigation": {
+    "home": "Home",
+    "reservation": "Reservation",
+    "about": "About",
+    "contact": "Contact",
+    "blog": "Blog"
   }
 }
