@@ -5,12 +5,19 @@ import { MdOutlinePhone } from "react-icons/md";
 import { StaggeredFadeBlur } from "./StagerredFade";
 import CurvedCard from "../CurvedCard";
 
-export default function Hero({ className }: { className: string }) {
+export default function Hero({
+  className,
+  hideActionOnMobile,
+}: {
+  className: string;
+  hideActionOnMobile?: boolean;
+}) {
   return (
     <CurvedCard
       className={className}
+      hideActionOnMobile={hideActionOnMobile}
       action={
-        <>
+        <div className="flex gap-4">
           <SocialMediaButton src="https://www.instagram.com">
             <CiInstagram />
           </SocialMediaButton>
@@ -20,7 +27,7 @@ export default function Hero({ className }: { className: string }) {
           <SocialMediaButton src="/">
             <MdOutlinePhone />
           </SocialMediaButton>
-        </>
+        </div>
       }
     >
       <video
@@ -31,9 +38,9 @@ export default function Hero({ className }: { className: string }) {
       >
         <source src="/videos/test2.mp4" type="video/mp4" />
       </video>
-      <div className="z-50 absolute bottom-14 left-14">
+      <div className="z-50 absolute bottom-14 left-1/2 md:left-14 -translate-x-1/2 md:translate-x-0">
         <StaggeredFadeBlur
-          className="w-[10ch] text-left text-8xl leading-30"
+          className="w-[10ch] text-center md:text-left text-6xl md:text-8xl leading-20 md:leading-30"
           text="SKONIŲ PAVASARIS"
         />
       </div>

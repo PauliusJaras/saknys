@@ -28,8 +28,11 @@ export default function Home() {
 
   return (
     <div className="grid grid-cols-12 h-full gap-4">
-      <Hero className={"col-span-12 lg:col-span-9"} />
-      <div className="col-span-12 lg:col-span-3 flex flex-col md:flex-row lg:flex-col gap-4">
+      <Hero
+        hideActionOnMobile={true}
+        className="col-span-full lg:col-span-9 min-h-[500px] md:min-h-auto"
+      />
+      <div className="col-span-full lg:col-span-3 flex flex-col md:flex-row lg:flex-col gap-4">
         {data.map((item, index) => (
           <Link key={index} href={item.href} className="w-full h-full group">
             <CurvedCard
