@@ -5,6 +5,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "../../i18n/routing";
 import Nav from "@/components/navigation/nav";
+import Footer from "@/components/footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,7 +46,8 @@ export default async function RootLayout({ children, params }: Props) {
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <Nav />
-          <div className="h-screen p-4">{children}</div>
+          <div className="h-auto md:h-screen p-4">{children}</div>
+          <Footer />
         </body>
       </html>
     </NextIntlClientProvider>
