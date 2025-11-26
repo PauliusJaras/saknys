@@ -1,15 +1,23 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, Variant } from "motion/react";
 import ArrowButton from "./ArrowButton";
 import FlopText from "./FlopText";
 
-export default function TextButtonCard({ text }: { text: string }) {
+export default function TextButtonCard({
+  text,
+  initial = {},
+  hovered = {},
+}: {
+  text: string;
+  initial?: Variant;
+  hovered?: Variant;
+}) {
   return (
     <motion.div
       variants={{
-        initial: {},
-        hovered: {},
+        initial: initial,
+        hovered: hovered,
       }}
       className="flex gap-4 items-center"
     >

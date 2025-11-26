@@ -1,15 +1,23 @@
 "use client";
 
 import { cn } from "@/helpers/cn";
-import { motion } from "motion/react";
+import { motion, Variant } from "motion/react";
 import { GoArrowRight } from "react-icons/go";
 
-export default function ArrowButton({ className }: { className?: string }) {
+export default function ArrowButton({
+  className,
+  initial = {},
+  hovered = {},
+}: {
+  className?: string;
+  initial?: Variant;
+  hovered?: Variant;
+}) {
   return (
     <motion.div
       variants={{
-        initial: {},
-        hovered: {},
+        initial: initial,
+        hovered: hovered,
       }}
       className={cn(
         "overflow-hidden relative rounded-full p-2 cursor-pointer bg-current/5 group-hover:border-current/25 border border-current/15 transition-all duration-500 ease-out-in",

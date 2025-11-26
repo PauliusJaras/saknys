@@ -1,11 +1,19 @@
-import { motion } from "motion/react";
+import { motion, Variant } from "motion/react";
 
-export default function FlopText({ text }: { text: string }) {
+export default function FlopText({
+  text,
+  initial = {},
+  hovered = {},
+}: {
+  text: string;
+  initial?: Variant;
+  hovered?: Variant;
+}) {
   return (
     <motion.div
       variants={{
-        initial: {},
-        hovered: {},
+        initial: initial,
+        hovered: hovered,
       }}
       className="relative overflow-hidden text-lg"
     >
