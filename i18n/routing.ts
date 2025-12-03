@@ -10,7 +10,21 @@ export const routing = defineRouting({
   localePrefix: 'as-needed',
   pathnames: {
     '/': '/',
-    '/blog': '/blogas',
-    '/about': '/apie',
+    '/blog': {
+      en: '/blog',
+      lt: '/blogas'
+    },
+    '/about': {
+      en: '/about',
+      lt: '/apie'
+    },
+    "/reservation": {
+      en: '/reservation',
+      lt: '/rezervacija'
+    },
+    "/contacts": {
+      en: '/contacts',
+      lt: '/kontaktai'
+    }
   }
 });

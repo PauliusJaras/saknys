@@ -32,7 +32,7 @@ export default function Nav() {
         </Link>
         <Link
           className="bg-current/5 hover:bg-current/10 hover:border-current/25 rounded-lg py-2 px-4 text-md border border-current/15 transition-all duration-500 ease-out-in"
-          href={"/"}
+          href={"/reservation"}
         >
           {t("Navigation.booking")}
         </Link>
