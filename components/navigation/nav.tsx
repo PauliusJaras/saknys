@@ -5,9 +5,11 @@ import Image from "next/image";
 import MenuOpenButton from "./menuOpenButton";
 import MenuDialog from "./menuDialog";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Nav() {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const t = useTranslations();
 
   return (
     <>
@@ -20,19 +22,19 @@ export default function Nav() {
           className="hidden md:inline-block hover:bg-current/5 hover:border-current/15 border-transparent border rounded-lg py-2 px-4 text-md transition-all duration-500 ease-out-in"
           href={"/blog"}
         >
-          blog
+          {t("Navigation.blog")}
         </Link>
         <Link
           className="hidden md:inline-block hover:bg-current/5 hover:border-current/15 border-transparent border rounded-lg py-2 px-4 text-md transition-all duration-500 ease-out-in"
           href={"/about"}
         >
-          about
+          {t("Navigation.about")}
         </Link>
         <Link
           className="bg-current/5 hover:bg-current/10 hover:border-current/25 rounded-lg py-2 px-4 text-md border border-current/15 transition-all duration-500 ease-out-in"
           href={"/"}
         >
-          Užsisakyti
+          {t("Navigation.booking")}
         </Link>
       </nav>
       <MenuDialog openMenu={openMenu} setOpenMenu={setOpenMenu} />
