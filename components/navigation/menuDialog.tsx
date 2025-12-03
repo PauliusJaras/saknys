@@ -32,7 +32,7 @@ export default function MenuDialog({
   const links = [
     { href: "/about", text: t("Navigation.about") },
     { href: "/blog", text: t("Navigation.blog") },
-    { href: "/contact", text: t("Navigation.contact") },
+    { href: "/contacts", text: t("Navigation.contact") },
     { href: "/reservation", text: t("Navigation.reservation") },
     { href: "/", text: t("Navigation.home") },
   ];
