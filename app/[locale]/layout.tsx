@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { GFS_Didot, Bodoni_Moda } from "next/font/google";
 import "./globals.css";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
@@ -7,13 +7,9 @@ import { routing } from "../../i18n/routing";
 import Nav from "@/components/navigation/nav";
 import Footer from "@/components/footer/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const bodoniSans = Bodoni_Moda({
+  weight: "400",
+  variable: "--font-bodoni-sans",
   subsets: ["latin"],
 });
 
@@ -40,9 +36,7 @@ export default async function RootLayout({ children, params }: Props) {
   return (
     <NextIntlClientProvider>
       <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
+        <body className={`${bodoniSans.variable}  antialiased`}>
           <Nav />
           <div className="h-auto md:h-screen p-4">{children}</div>
           <Footer />
