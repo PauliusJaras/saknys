@@ -37,8 +37,6 @@ export default async function RootLayout({ children, params }: Props) {
     notFound();
   }
 
-  console.log(locale);
-
   return (
     <NextIntlClientProvider>
       <html lang="en">
