@@ -1,11 +1,12 @@
+export const dynamic = "force-static";
+
 import CurvedCard from "@/components/CurvedCard";
-import Footer from "@/components/footer/Footer";
 import Hero from "@/components/hero/Hero";
 import TextButtonCard from "@/components/TextButtonCard";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
   const data = [
     {
       imgSrc: "/images/placeholder.jpg",
