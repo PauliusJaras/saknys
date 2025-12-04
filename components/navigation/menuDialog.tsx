@@ -29,18 +29,30 @@ export default function MenuDialog({
     }
   }, [pathname]);
 
+  useEffect(() => {
+    if (openMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [openMenu]);
+
   const links = [
-    { href: "/about", text: t("Navigation.about") },
-    { href: "/blog", text: t("Navigation.blog") },
+    { href: "/", text: t("Navigation.home") },
     { href: "/contacts", text: t("Navigation.contact") },
     { href: "/reservation", text: t("Navigation.reservation") },
-    { href: "/", text: t("Navigation.home") },
+    { href: "/blog", text: t("Navigation.blog") },
+    { href: "/about", text: t("Navigation.about") },
   ];
 
   return (
     <div
       className={cn(
-        "w-screen h-screen bg-background absolute z-999 overflow-hidden transition-opacity duration-500 opacity-0 pointer-events-none p-4",
+        "w-screen h-screen bg-background fixed z-999 overflow-hidden transition-opacity duration-500 opacity-0 pointer-events-none p-4",
         {
           "opacity-100 visible pointer-events-auto transition-opacity duration-500":
             openMenu,
