@@ -32,13 +32,13 @@ export default async function Home() {
     <div className="grid grid-cols-12 h-full gap-4">
       <Hero
         hideActionOnMobile={true}
-        className="col-span-full lg:col-span-9 min-h-[500px] md:min-h-auto"
+        className="col-span-full lg:col-span-9 min-h-[400px] sm:min-h-[600px] md:min-h-auto"
       />
       <div className="col-span-full lg:col-span-3 flex flex-col md:flex-row lg:flex-col gap-4">
         {data.map((item, index) => (
           <Link key={index} href={item.href} className="w-full h-full group">
             <CurvedCard
-              className="min-h-[600px] md:min-h-[250px]"
+              className="min-h-[400px] md:min-h-40"
               action={<TextButtonCard text={item.text} />}
             >
               <Image
