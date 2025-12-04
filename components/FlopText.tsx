@@ -15,7 +15,7 @@ export default function FlopText({
         initial: initial,
         hovered: hovered,
       }}
-      className="relative overflow-hidden text-lg"
+      className="relative overflow-hidden"
     >
       <motion.p
         variants={{

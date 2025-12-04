@@ -67,10 +67,14 @@ export default function MenuDialog({
           })}
           onClick={menuCloseHandler}
         />
-        <div className="flex gap-4 flex-col items-center justify-center">
+        <div className="flex gap-6 flex-col items-center justify-center">
           <div className="size-3 rotate-45 border border-current/15"></div>
           {links?.map((link, index) => (
-            <Link key={index} href={link.href}>
+            <Link
+              key={index}
+              href={link.href}
+              className="font-bodoni text-3xl md:text-5xl"
+            >
               <MotionCard>
                 <FlopText text={link.text} />
               </MotionCard>

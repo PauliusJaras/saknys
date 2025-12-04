@@ -36,7 +36,11 @@ export default async function Home() {
       />
       <div className="col-span-full lg:col-span-3 flex flex-col md:flex-row lg:flex-col gap-4">
         {data.map((item, index) => (
-          <Link key={index} href={item.href} className="w-full h-full group">
+          <Link
+            key={index}
+            href={item.href}
+            className="w-full h-full group font-bodoni"
+          >
             <CurvedCard
               className="min-h-[400px] md:min-h-40"
               action={<TextButtonCard text={item.text} />}
