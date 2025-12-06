@@ -42,7 +42,7 @@ export default function MenuDialog({
   }, [openMenu]);
 
   const links = [
-    { href: "/", text: t("Navigation.home") },
+    { href: "/", text: t("Navigation.home"), disabled: "/" },
     { href: "/contacts", text: t("Navigation.contact") },
     { href: "/reservation", text: t("Navigation.reservation") },
     { href: "/blog", text: t("Navigation.blog") },
@@ -75,9 +75,18 @@ export default function MenuDialog({
           </div>
           {links?.map((link, index) => (
             <Link
+              aria-disabled={
+                link?.disabled
+                  ? pathname === link.href
+                  : pathname.includes(link.text.toLowerCase())
+              }
               key={index}
               href={link.href}
-              className="font-bodoni text-3xl md:text-5xl"
+              className={cn("font-bodoni text-3xl md:text-5xl", {
+                "line-through pointer-events-none": link?.disabled
+                  ? pathname === link.href
+                  : pathname.includes(link.text.toLowerCase()),
+              })}
             >
               <MotionCard>
                 <FlopText text={link.text} />
