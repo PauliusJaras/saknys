@@ -7,16 +7,23 @@ import { ReactNode } from "react";
 type RevealCardProps = {
   children: ReactNode;
   className?: string;
+  duration?: number;
+  delay?: number;
 };
 
-export default function RevealCard({ children, className }: RevealCardProps) {
+export default function RevealCard({
+  children,
+  className,
+  duration = 0.8,
+  delay = 0,
+}: RevealCardProps) {
   return (
     <motion.div
       className={cn(className)}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "0px" }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: duration, ease: "easeOut", delay: delay }}
     >
       {children}
     </motion.div>

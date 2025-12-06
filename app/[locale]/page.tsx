@@ -14,18 +14,21 @@ export default async function Home() {
       imgAlt: "placeholder image",
       href: "/about",
       text: "About",
+      delay: 0,
     },
     {
       imgSrc: "/images/placeholder2.jpg",
       imgAlt: "placeholder image 2",
       href: "/blog",
       text: "Blog",
+      delay: 0.15,
     },
     {
       imgSrc: "/images/placeholder3.jpg",
       imgAlt: "placeholder image 3",
       href: "/menu",
       text: "Menu",
+      delay: 0.3,
     },
   ];
 
@@ -37,7 +40,7 @@ export default async function Home() {
       />
       <div className="col-span-full lg:col-span-3 flex flex-col md:flex-row lg:flex-col gap-4">
         {data.map((item, index) => (
-          <RevealCard className="w-full h-full" key={index}>
+          <RevealCard className="w-full h-full" key={index} delay={item?.delay}>
             <Link href={item.href} className="w-full h-full group font-bodoni">
               <CurvedCard
                 className="min-h-[400px] md:min-h-40"
