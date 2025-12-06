@@ -2,6 +2,7 @@ export const dynamic = "force-static";
 
 import CurvedCard from "@/components/CurvedCard";
 import Hero from "@/components/hero/Hero";
+import RevealCard from "@/components/RevealCard";
 import TextButtonCard from "@/components/TextButtonCard";
 import Image from "next/image";
 import Link from "next/link";
@@ -36,23 +37,21 @@ export default async function Home() {
       />
       <div className="col-span-full lg:col-span-3 flex flex-col md:flex-row lg:flex-col gap-4">
         {data.map((item, index) => (
-          <Link
-            key={index}
-            href={item.href}
-            className="w-full h-full group font-bodoni"
-          >
-            <CurvedCard
-              className="min-h-[400px] md:min-h-40"
-              action={<TextButtonCard text={item.text} />}
-            >
-              <Image
-                alt={item.imgAlt}
-                fill
-                className="object-cover w-full h-full group-hover:scale-105 duration-300 opacity-50 group-hover:opacity-100 overflow-hidden"
-                src={item.imgSrc}
-              ></Image>
-            </CurvedCard>
-          </Link>
+          <RevealCard className="w-full h-full" key={index}>
+            <Link href={item.href} className="w-full h-full group font-bodoni">
+              <CurvedCard
+                className="min-h-[400px] md:min-h-40"
+                action={<TextButtonCard text={item.text} />}
+              >
+                <Image
+                  alt={item.imgAlt}
+                  fill
+                  className="object-cover w-full h-full group-hover:scale-105 duration-300 opacity-50 group-hover:opacity-100 overflow-hidden"
+                  src={item.imgSrc}
+                ></Image>
+              </CurvedCard>
+            </Link>
+          </RevealCard>
         ))}
       </div>
     </div>

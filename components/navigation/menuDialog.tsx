@@ -68,7 +68,11 @@ export default function MenuDialog({
           onClick={menuCloseHandler}
         />
         <div className="flex gap-6 flex-col items-center justify-center">
-          <div className="size-3 rotate-45 border border-current/15"></div>
+          <div className="flex items-center">
+            <div className="size-3 rotate-45 border border-current/15"></div>
+            <div className="h-px w-6 bg-current/15 mx-0.5"></div>
+            <div className="size-3 rotate-45 border border-current/15"></div>
+          </div>
           {links?.map((link, index) => (
             <Link
               key={index}
@@ -80,7 +84,11 @@ export default function MenuDialog({
               </MotionCard>
             </Link>
           ))}
-          <div className="size-3 rotate-45 border border-current/15"></div>
+          <div className="flex items-center">
+            <div className="size-3 rotate-45 border border-current/15"></div>
+            <div className="h-px w-6 bg-current/15 mx-0.5"></div>
+            <div className="size-3 rotate-45 border border-current/15"></div>
+          </div>
         </div>
       </div>
     </div>
