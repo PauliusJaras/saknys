@@ -10,7 +10,7 @@ type TextStaggeredFadeProps = {
 
 export const StaggeredFadeBlur: React.FC<TextStaggeredFadeProps> = ({
   text,
-  className = "",
+  className,
 }) => {
   const variants = {
     hidden: { opacity: 0, filter: "blur(10px)" },
@@ -33,7 +33,7 @@ export const StaggeredFadeBlur: React.FC<TextStaggeredFadeProps> = ({
       animate={isInView ? "show" : ""}
       variants={variants}
       viewport={{ once: true }}
-      className={cn("", className)}
+      className={cn(className)}
     >
       {letters.map((word, i) => (
         <motion.span key={`${word}-${i}`} variants={variants} custom={i}>

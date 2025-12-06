@@ -1,13 +1,16 @@
+import { cn } from "@/helpers/cn";
 import { motion, Variant } from "motion/react";
 
 export default function FlopText({
   text,
   initial = {},
   hovered = {},
+  className,
 }: {
   text: string;
   initial?: Variant;
   hovered?: Variant;
+  className?: string;
 }) {
   return (
     <motion.div
@@ -15,7 +18,7 @@ export default function FlopText({
         initial: initial,
         hovered: hovered,
       }}
-      className="relative overflow-hidden"
+      className={cn("relative overflow-hidden", className)}
     >
       <motion.p
         variants={{
