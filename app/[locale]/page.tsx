@@ -5,7 +5,7 @@ import Hero from "@/components/hero/Hero";
 import RevealCard from "@/components/RevealCard";
 import TextButtonCard from "@/components/TextButtonCard";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import { routes } from "@/i18n/routing";
 

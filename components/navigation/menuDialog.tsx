@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import FlopText from "../FlopText";
 import MotionCard from "../MotionCard";
 import MenuCloseButton from "./menuCloseButton";

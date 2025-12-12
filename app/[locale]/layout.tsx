@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { GFS_Didot, Bodoni_Moda } from "next/font/google";
+import { Bodoni_Moda } from "next/font/google";
 import "./globals.css";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
@@ -35,7 +35,7 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <NextIntlClientProvider>
-      <html lang="en">
+      <html lang={locale}>
         <body className={`${bodoniSans.variable}  antialiased`}>
           <Nav />
           <div className="h-auto md:h-screen p-4">{children}</div>
