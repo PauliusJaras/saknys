@@ -5,6 +5,7 @@ import { MdOutlinePhone } from "react-icons/md";
 import { StaggeredFadeBlur } from "./StagerredFade";
 import CurvedCard from "../CurvedCard";
 import { useTranslations } from "next-intl";
+import { cn } from "@/helpers/cn";
 
 export default function Hero({
   className,
@@ -17,7 +18,7 @@ export default function Hero({
 
   return (
     <CurvedCard
-      className={className}
+      className={cn("bg-black", className)}
       hideActionOnMobile={hideActionOnMobile}
       action={
         <div className="flex gap-4">
@@ -34,7 +35,7 @@ export default function Hero({
       }
     >
       <video
-        className="w-full h-full object-cover rounded-xl"
+        className="w-full h-full object-cover rounded-xl mask-alpha mask-b-from-black mask-b-from-60% mask-b-to-transparent"
         autoPlay
         loop
         muted

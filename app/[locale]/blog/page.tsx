@@ -11,13 +11,13 @@ export default async function BlogPage() {
   return (
     <div className="grid grid-cols-12 h-full gap-4">
       <CurvedCard
-        className="col-span-6 min-h-[400px] md:min-h-40"
+        className="col-span-6 min-h-[400px] md:min-h-40 bg-black"
         hideAction={true}
       >
         <Image
           alt={"Image placeholder"}
           fill
-          className="object-cover w-full h-full overflow-hidden"
+          className="object-cover w-full h-full overflow-hidden mask-alpha mask-b-from-black mask-b-from-70% mask-b-to-transparent"
           src={"/images/placeholder2.jpg"}
         ></Image>
         <div className="z-50 absolute bottom-14 left-1/2 md:left-14 -translate-x-1/2 md:translate-x-0">
