@@ -6,26 +6,30 @@ import RevealCard from "@/components/RevealCard";
 import TextButtonCard from "@/components/TextButtonCard";
 import Image from "next/image";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { routes } from "@/i18n/routing";
 
 export default async function Home() {
+  const t = await getTranslations();
+
   const data = [
     {
       imgSrc: "/images/placeholder.jpg",
       imgAlt: "placeholder image",
-      href: "/about",
-      text: "About",
+      href: routes.about,
+      text: t("Navigation.about"),
     },
     {
       imgSrc: "/images/placeholder2.jpg",
       imgAlt: "placeholder image 2",
-      href: "/blog",
-      text: "Blog",
+      href: routes.contacts,
+      text: t("Navigation.contact"),
     },
     {
       imgSrc: "/images/placeholder3.jpg",
       imgAlt: "placeholder image 3",
-      href: "/menu",
-      text: "Menu",
+      href: routes.blog,
+      text: t("Navigation.blog"),
     },
   ];
 

@@ -1,4 +1,14 @@
 import {defineRouting} from 'next-intl/routing';
+
+type routeKeys = 'home' | 'blog' | 'reservation' | 'about' | 'contacts'
+
+export const routes:Record<routeKeys, string> = {
+  home: '/',
+  blog: '/blog',
+  reservation: '/reservation',
+  about: '/about',
+  contacts: '/contacts'
+}
  
 export const routing = defineRouting({
   // A list of all locales that are supported
@@ -9,20 +19,20 @@ export const routing = defineRouting({
   // No prefix for default locale
   localePrefix: 'as-needed',
   pathnames: {
-    '/': '/',
-    "/blog": {
+    [routes.home]: '/',
+    [routes.blog]: {
       en: '/blog',
       lt: '/blogas'
     },
-    "/reservation": {
+    [routes.reservation]: {
       en: '/reservation',
       lt: '/rezervacija'
     },
-    "/about": {
+    [routes.about]: {
       en: '/about',
       lt: '/apie'
     },
-    "/contacts": {
+    [routes.contacts]: {
       en: '/contacts',
       lt: '/kontaktai'
     }

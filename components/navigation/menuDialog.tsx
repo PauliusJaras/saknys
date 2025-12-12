@@ -25,7 +25,7 @@ export default function MenuDialog({
 
   useEffect(() => {
     if (openMenu) {
-      setTimeout(() => setOpenMenu(false), 300);
+      setTimeout(() => setOpenMenu(false), 100);
     }
   }, [pathname]);
 
