@@ -1,8 +1,20 @@
 {
-  "HomePage": {
-    "title": "Sveiki, pasauli!"
+  "homepage": {
+    "title": "Skonių pavasaris"
   },
-  "Navigation": {
+  "about": {
+    "title": "Apie mus"
+  },
+  "blog": {
+    "title": "Blogas"
+  },
+  "contacts": {
+    "title": "Mūsų kontaktai"
+  },
+  "reservation": {
+    "title": "Vakaro rezervacija"
+  },
+  "navigation": {
     "home": "Pradžia",
     "reservation": "Rezervacija",
     "about": "Apie Mus",

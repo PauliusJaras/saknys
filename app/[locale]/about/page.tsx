@@ -22,8 +22,8 @@ export default async function AboutPage() {
         ></Image>
         <div className="z-50 absolute bottom-14 left-1/2 md:left-14 -translate-x-1/2 md:translate-x-0">
           <StaggeredFadeBlur
-            className="w-[10ch] text-center md:text-left text-6xl md:text-8xl leading-20 md:leading-30 font-bodoni"
-            text={t("Navigation.about")}
+            className="w-[10ch] text-center md:text-left text-6xl md:text-8xl leading-20 md:leading-30 font-bodoni uppercase"
+            text={t("about.title")}
           />
         </div>
       </CurvedCard>

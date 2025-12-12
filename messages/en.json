@@ -1,8 +1,20 @@
 {
-  "HomePage": {
-    "title": "Hello world!"
+  "homepage": {
+    "title": "Spring of Flavors"
   },
-  "Navigation": {
+  "about": {
+    "title": "About us"
+  },
+  "blog": {
+    "title": "Blog"
+  },
+  "contacts": {
+    "title": "Contact us"
+  },
+  "reservation": {
+    "title": "Evening reservation"
+  },
+  "navigation": {
     "home": "Home",
     "reservation": "Reservation",
     "about": "About Us",

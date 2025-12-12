@@ -17,19 +17,19 @@ export default async function Home() {
       imgSrc: "/images/placeholder.jpg",
       imgAlt: "placeholder image",
       href: routes.about,
-      text: t("Navigation.about"),
+      text: t("navigation.about"),
     },
     {
       imgSrc: "/images/placeholder2.jpg",
       imgAlt: "placeholder image 2",
       href: routes.contacts,
-      text: t("Navigation.contact"),
+      text: t("navigation.contact"),
     },
     {
       imgSrc: "/images/placeholder3.jpg",
       imgAlt: "placeholder image 3",
       href: routes.blog,
-      text: t("Navigation.blog"),
+      text: t("navigation.blog"),
     },
   ];
 

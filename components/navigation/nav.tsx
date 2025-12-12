@@ -22,19 +22,19 @@ export default function Nav() {
           className="hidden md:inline-block hover:bg-current/5 hover:border-current/15 border-transparent border rounded-lg py-2 px-4 text-md transition-all duration-500 ease-out-in"
           href={"/blog"}
         >
-          {t("Navigation.blog")}
+          {t("navigation.blog")}
         </Link>
         <Link
           className="hidden md:inline-block hover:bg-current/5 hover:border-current/15 border-transparent border rounded-lg py-2 px-4 text-md transition-all duration-500 ease-out-in"
           href={"/about"}
         >
-          {t("Navigation.about")}
+          {t("navigation.about")}
         </Link>
         <Link
           className="bg-current/5 hover:bg-current/10 hover:border-current/25 rounded-lg py-2 px-4 text-md border border-current/15 transition-all duration-500 ease-out-in"
           href={"/reservation"}
         >
-          {t("Navigation.booking")}
+          {t("navigation.booking")}
         </Link>
       </nav>
       <MenuDialog openMenu={openMenu} setOpenMenu={setOpenMenu} />

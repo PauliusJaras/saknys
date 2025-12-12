@@ -42,11 +42,11 @@ export default function MenuDialog({
   }, [openMenu]);
 
   const links = [
-    { href: "/", text: t("Navigation.home"), disabled: "/" },
-    { href: "/contacts", text: t("Navigation.contact") },
-    { href: "/reservation", text: t("Navigation.reservation") },
-    { href: "/blog", text: t("Navigation.blog") },
-    { href: "/about", text: t("Navigation.about") },
+    { href: "/", text: t("navigation.home"), disabled: "/" },
+    { href: "/contacts", text: t("navigation.contact") },
+    { href: "/reservation", text: t("navigation.reservation") },
+    { href: "/blog", text: t("navigation.blog") },
+    { href: "/about", text: t("navigation.about") },
   ];
 
   return (
