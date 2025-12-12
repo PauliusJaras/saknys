@@ -10,11 +10,13 @@ export default function CurvedCard({
   children,
   action,
   hideActionOnMobile = false,
+  hideAction = false,
 }: {
   className?: string;
   children: React.ReactNode;
   action?: React.ReactNode;
   hideActionOnMobile?: boolean;
+  hideAction?: boolean;
 }) {
   return (
     <MotionCard className={cn("relative ", className)}>
@@ -22,7 +24,8 @@ export default function CurvedCard({
       <motion.div
         className={cn(
           "bg-background absolute bottom-0 right-0 pt-4.5 pl-4 gap-3 items-end rounded-tl-4xl",
-          hideActionOnMobile ? "md:flex hidden" : "flex"
+          hideActionOnMobile ? "md:flex hidden" : "flex",
+          { hidden: hideAction }
         )}
       >
         {action}
