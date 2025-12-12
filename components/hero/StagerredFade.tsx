@@ -6,11 +6,13 @@ import * as React from "react";
 type TextStaggeredFadeProps = {
   text: string;
   className?: string;
+  delay?: number;
 };
 
 export const StaggeredFadeBlur: React.FC<TextStaggeredFadeProps> = ({
   text,
   className = "",
+  delay = 0.07,
 }) => {
   const variants = {
     hidden: { opacity: 0, filter: "blur(10px)" },
@@ -18,7 +20,7 @@ export const StaggeredFadeBlur: React.FC<TextStaggeredFadeProps> = ({
       y: 0,
       opacity: 1,
       filter: "blur(0px)",
-      transition: { delay: i * 0.07, duration: 1 },
+      transition: { delay: i * delay, duration: 1 },
     }),
   };
 
