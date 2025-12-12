@@ -12,7 +12,7 @@ type TextStaggeredFadeProps = {
 export const StaggeredFadeBlur: React.FC<TextStaggeredFadeProps> = ({
   text,
   className = "",
-  delay = 0.07,
+  delay = 0.03,
 }) => {
   const variants = {
     hidden: { opacity: 0, filter: "blur(10px)" },
